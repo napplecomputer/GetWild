@@ -1,0 +1,13 @@
+*.xml
+
+!/codeStyleSettings.xml
+!/copyright/*.xml
+!/fileColors.xml
+!/fileTemplates/
+!/encodings.xml
+!/gradle.xml
+!/runConfigurations/*.xml
+!/inspectionProfiles/*.xml
+!/scopes/*.xml
+!/templateLanguages.xml
+!/vcs.xml

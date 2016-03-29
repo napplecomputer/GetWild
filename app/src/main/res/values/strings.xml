@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">GetWild</string>
+  <string name="threshold">threshold %d</string>
+  <string name="current_Brightness">CurrentBrightness %f</string>
+</resources>
