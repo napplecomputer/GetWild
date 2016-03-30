@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
   @Override protected void onResume() {
     super.onResume();
-    registLightSensor();
+    registerLightSensor();
   }
 
   @Override protected void onPause() {
-    unregistLightSensor();
+    unregisterLightSensor();
     super.onPause();
   }
 
@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
     threshold.setText(getString(R.string.threshold, thresholdValue));
   }
 
-  private void registLightSensor() {
+  private void registerLightSensor() {
     SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
     Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     sensorManager.registerListener(listener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
   }
 
-  private void unregistLightSensor() {
+  private void unregisterLightSensor() {
     ((SensorManager) getSystemService(SENSOR_SERVICE)).unregisterListener(listener);
   }
 
