@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
     initView();
   }
 
-  @Override protected void onResume() {
-    super.onResume();
+  @Override protected void onStart() {
+    super.onStart();
     registerLightSensor();
   }
 
-  @Override protected void onPause() {
+  @Override protected void onStop() {
     unregisterLightSensor();
-    super.onPause();
+    super.onStop();
   }
 
   private void initView() {
