@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     ((SensorManager) getSystemService(SENSOR_SERVICE)).unregisterListener(listener);
   }
 
-  private Intent getWildAndTouch() {
+  private Intent getWildAndTough() {
     Intent intent = new Intent();
     intent.setAction(MediaStore.INTENT_ACTION_MEDIA_PLAY_FROM_SEARCH);
     intent.putExtra(MediaStore.EXTRA_MEDIA_FOCUS, "vnd.android.cursor.item/audio");
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     @Override public void onSensorChanged(SensorEvent event) {
       float value = event.values[0];
       if (tmpValue >= thresholdValue && value < thresholdValue) {
-        startActivity(getWildAndTouch());
+        startActivity(getWildAndTough());
       }
       tmpValue = value;
       currentBrightness.setText(getString(R.string.current_Brightness, tmpValue));
